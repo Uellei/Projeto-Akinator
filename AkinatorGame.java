@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -9,62 +8,121 @@ public class AkinatorGame {
         possiveisRestaurantes = restaurant.getPossiveisRestaurantes();
 
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("---- RESPONDA APENAS SIM/NAO PARA AS PERGUNTAS ----");
         while (true) {
-            System.out.println("Você está pensando em um restaurante? (Sim/Nao): ");
+            System.out.print("Você está pensando em um restaurante? ");
             String resposta = scanner.nextLine().toLowerCase();
 
             if (resposta.equals("sim")) {
-                filterBy("Cadeia", "Restaurante");
-                break;
+                System.out.print("O País de Origem é os Estados Unidos? ");
+                resposta = scanner.nextLine().toLowerCase();
+                if(resposta.equals("sim")) {
+                    System.out.println("Você está pensando no OutBack!!");
+                    break;
+                } else if(resposta.equals("nao")) {
+                    System.out.println("Você está pensando no Paris 6!!");
+                    break;
+                } else {
+                    System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                }
             } else if (resposta.equals("nao")) {
-                filterBy("Cadeia", "Fast-food");
-                break;
-            } else {
-                System.out.println("Resposta inválida. Por favor, responda com 'Sim' ou 'Não'.");
-            }
-        }
-        while (true) {
-            System.out.println("O Pais de Origem desse Estabelecimento é os Estados Unidos? (Sim/Nao): ");
-            String resposta = scanner.nextLine().toLowerCase();
-
-            if (resposta.equals("sim")) {
-                filterBy("País de Origem", "Estados Unidos");
-                retornaNomeSePossivel();
-                break;
-            } else if (resposta.equals("nao")) {
-                System.out.println("O Pais de Origem desse Estabelecimento é o Brasil? (Sim/Nao): ");
-                String resposta2 = scanner.nextLine().toLowerCase();
-                if (resposta2.equals("sim")) {
-                    filterBy("País de Origem", "Brasil");
-                    retornaNomeSePossivel();
-                break;
-            } else {
-                filterBy("País de Origem", "Itália");
-                retornaNomeSePossivel();
-                break;
+                System.out.print("O País de Origem é os Estados Unidos? ");
+                resposta = scanner.nextLine().toLowerCase();
+                if(resposta.equals("sim")) {
+                    System.out.print("A influência culinária é Americana? ");
+                    resposta = scanner.nextLine().toLowerCase();
+                    if(resposta.equals("sim")) {
+                        System.out.print("O Prato Principal é o Hamburguer? ");
+                        resposta = scanner.nextLine().toLowerCase();
+                        if(resposta.equals("sim")) {
+                            System.out.print("O Big Mac faz parte do cardápio? ");
+                            String resposta6 = scanner.nextLine().toLowerCase();
+                            if(resposta6.equals("sim")) {
+                                System.out.println("Você está pensando no Mc'Donalds!!");
+                                break;
+                            } else if(resposta6.equals("nao")) {
+                                System.out.println("Você está pensando no Burguer King!!");
+                                break;
+                            } else {
+                                System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                            }
+                        } else if(resposta.equals("nao")) {
+                            System.out.print("O Prato Principal é o Frango Frito? ");
+                            resposta = scanner.nextLine().toLowerCase();
+                            if(resposta.equals("sim")) {
+                                System.out.println("Você está pensando no KFC!!");
+                                break;
+                            } else if(resposta.equals("nao")) {
+                                System.out.println("Você está pensando no Subway!!");
+                                break;
+                            } else {
+                                System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                            }
+                        } else {
+                            System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                        }
+                    } else if(resposta.equals("nao")) {
+                        System.out.print("A Influência Culinária é Mexicana? ");
+                        resposta = scanner.nextLine().toLowerCase();
+                        if(resposta.equals("sim")) {
+                            System.out.println("Você está pensando no Taco Bell!!");
+                            break;
+                        } else if(resposta.equals("nao")) {
+                            System.out.print("A Influência é Italiana? ");
+                            resposta = scanner.nextLine().toLowerCase();
+                            if(resposta.equals("sim")) {
+                                System.out.println("Você está pensando na Domino's!!");
+                                break;
+                            } else if(resposta.equals("nao")) {
+                                System.out.println("Você está pensando no Starbucks!!");
+                                break;
+                            } else {
+                                System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                            }
+                        } else {
+                            System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                        }
+                    }
+                } else if(resposta.equals("nao")) {
+                    System.out.print("O País de Origem é o Brasil? ");
+                    resposta = scanner.nextLine().toLowerCase();
+                    if(resposta.equals("sim")) {
+                        System.out.print("O Prato Principal é Esfiha? ");
+                        resposta = scanner.nextLine().toLowerCase();
+                        if(resposta.equals("sim")) {
+                            System.out.print("O Logo é um gênio? ");
+                            resposta = scanner.nextLine().toLowerCase();
+                            if(resposta.equals("sim")) {
+                                System.out.println("Você está pensando no Habib's!!");
+                                break;
+                            } else if(resposta.equals("nao")) {
+                                System.out.println("Você está pensando no Ponto da Esfiha!!");
+                                break;
+                            } else {
+                                System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                            }
+                        } else if(resposta.equals("nao")) {
+                            System.out.print("O Prato Principal é Massa");
+                            resposta = scanner.nextLine().toLowerCase();
+                            if(resposta.equals("sim")) {
+                                System.out.println("Você está pensando no Spoletto!!");
+                                break;
+                            } else if(resposta.equals("nao")) {
+                                System.out.println("Você está pensando no Bob's!!");
+                                break;
+                            } else {
+                                System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                            }
+                        } else {
+                            System.out.println("Resposta Inválida. Por favor, responda com 'Sim' ou 'Não'");
+                        }
+                    } else if(resposta.equals("nao")) {
+                        System.out.println("Você está pensando no Pizza Hut!!");
+                        break;
+                    }
                 }
             } else {
                 System.out.println("Resposta inválida. Por favor, responda com 'Sim' ou 'Não'.");
-            }
-        }
-        
-    }
-    static void filterBy(String chave, String valor) {
-        Map<String, Map<String, String>> restaurantesFiltrados = new HashMap<>();
-        for (Map.Entry<String, Map<String, String>> entry : possiveisRestaurantes.entrySet()) {
-            if (entry.getValue().get(chave).equals(valor)) {
-                restaurantesFiltrados.put(entry.getKey(), entry.getValue());
-            }
-        }
-        possiveisRestaurantes = restaurantesFiltrados;
-    }
-
-    static void retornaNomeSePossivel() {
-        if (possiveisRestaurantes.size() == 1) {
-            for (Map.Entry<String, Map<String, String>> entry : possiveisRestaurantes.entrySet()) {
-                String restauranteNome = entry.getKey();
-                System.out.println("Você está pensando no Restaurante: " + restauranteNome);
             }
         }
     }
