@@ -7,7 +7,6 @@ public class AkinatorInterface {
   private JLabel questionLabel;
   private JButton yesButton;
   private JButton noButton;
-  private JFrame currentQuestionFrame;
 
   public static void main(String[] args) {
     SwingUtilities.invokeLater(() -> {
@@ -518,42 +517,5 @@ public class AkinatorInterface {
         });
       }
     });
-    noButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        JFrame frame = new JFrame("Akinator Game");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 150);
-        frame.setLayout(null);
-
-        JLabel label = new JLabel("Voce pensou no Paris 6");
-        label.setBounds(10, 10, 200, 20);
-
-        frame.add(label);
-        frame.setVisible(true);
-      }
-    });
-  }
-
-  void makeQuestion(String tituloPergunta, String pergunta) {
-    JFrame frame = new JFrame(tituloPergunta);
-    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-    frame.setSize(400, 150);
-    frame.setLayout(null);
-
-    JLabel questionLabel = new JLabel(pergunta);
-    questionLabel.setBounds(10, 10, 380, 20);
-
-    JButton yesButton = new JButton("Sim");
-    yesButton.setBounds(10, 40, 80, 30);
-
-    JButton noButton = new JButton("Não");
-    noButton.setBounds(100, 40, 80, 30);
-
-    frame.add(questionLabel);
-    frame.add(yesButton);
-    frame.add(noButton);
-
-    frame.setVisible(true);
   }
 }
