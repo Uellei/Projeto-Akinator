@@ -28,6 +28,8 @@ public class Estabelecimento {
         possiveisRestaurantes.put("Bob's", createRestaurante("Fast-food", "Hamburguer", "Brasil", "Americana", "Big Bob"));
         possiveisRestaurantes.put("Outback", createRestaurante("Restaurante", "Steakhouse", "Estados Unidos", "Americana", null));
         possiveisRestaurantes.put("Paris 6", createRestaurante("Restaurante", "Massa", "Brasil", "Francesa", null));
+        possiveisRestaurantes.put("Autogrill", createRestaurante("Fast-food", "Refeições rápidas", "Itália", "Italiana", null));
+
     }
 
     private Map<String, String> createRestaurante(String cadeia, String pratoPrincipal, String paisOrigem, String influenciaCulinaria, String especialidade) {
