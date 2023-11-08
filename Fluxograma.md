@@ -3,7 +3,8 @@ Nome | Cadeia | Prato Principal | País de Origem | Influência Culinária | Esp
 Burguer King | Fast-Food | Hamburguer | Estados Unidos | Americana | Whoper
 McDonalds | Fast-Food | Hamburguer | Estados Unidos | Americana | Big Mac
 KFC | Fast-food  | Frango Frito  | Estados Unidos    | Americana
-Pizza Hut | Fast-food  | Pizza  | Itália  | Italiana
+Pizza Hut | Fast-food  | Pizza  | Estados Unidos  | Italiana
+Autogrill | Fast-food  | Refeições rápidas  | Itália  | Italiana
 Subway | Fast-food  | Sanduíche  | EStados Unidos | Americana
 Starbucks | Fast-food  | Bebidas  | Estados Unidos | Cafeteria
 Taco Bell | Fast-food  | Taco  | Estados Unidos | Mexicana
